@@ -1,0 +1,510 @@
+header {
+  width: 1024px;
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background: $bg-color2;
+  padding: 0.6rem 0;
+
+  .trigger {
+    display: none;
+  }
+
+  .header_container {
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+
+    h1 {
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+
+    nav {
+
+      ul {
+        display: flex;
+
+        a {
+          position: relative;
+          display: inline-block;
+          margin-left: 4rem;
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: #fff;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $main-color;
+            transform: scaleX(0);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+          }
+
+          &:hover {
+            color: $main-color;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+
+    .icon_wrap {
+      display: flex;
+      position: absolute;
+      right: 2rem;
+
+      .lang {
+        display: flex;
+        align-items: center;
+
+        p {
+          color: #fff;
+          font-size: 0.8rem;
+        }
+
+        i {
+          padding-right: 0.5rem;
+          font-size: 1rem;
+          color: #fff;
+        }
+      }
+
+      .link_icons {
+        i {
+          padding-left: 1rem;
+          font-size: 1.2rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/**************main*************/
+main {
+  position: relative;
+  top:0;
+
+  .main {
+    display: flex;
+    gap: 4rem;
+    margin: 4rem 4rem 0;
+
+    .youheeyul {
+      width: 40rem;
+      height: 40rem;
+
+    }
+
+    .main_txt {
+      width: calc(60%);
+      height: 600px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+
+      .main_txt1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: .8rem;
+
+      }
+
+      .main_txt2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 6rem;
+      }
+
+      .main_txt3 {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .main_txt4 {
+        font-size: 1rem;
+        line-height: 1.8rem;
+      }
+    }
+
+  }
+  .sub_menu {
+    position:fixed;
+    top: 5rem;
+    right: 0;
+    background: rgba(37, 37, 37, 0.9);
+    width: 30.2rem;
+    height: 100%;
+    display: none;
+    z-index: 99;
+
+    .sub_menu_wrap {
+      padding: 3rem;
+
+      .sub_list {
+        li {
+          display: flex;
+          justify-content: end;
+
+          a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 3rem;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background-color: $main-color;
+              transform: scaleX(0);
+              transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            &:hover {
+              color: $main-color;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+            }
+          }
+
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: inline-block;
+        font-size: 1.8rem;
+        color: $gray4;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    .icon_wrap {
+      position: absolute;
+      top:50%;
+      right:3rem;
+
+      .link_icons{
+        a {
+          margin-left:1rem;
+
+          i {
+            color:$gray4;
+            font-size: 1.5rem;
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+
+/******************album*********************/
+
+.Album {
+  .swiper {
+    position: relative;
+    margin: 5rem;
+    overflow: hidden;
+    padding: 0 .8rem 0;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  h1 {
+    font-size: 2rem;
+    margin: 10rem 0 3rem 5rem;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+
+    img {
+      width:21rem;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .swiper-button1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 45%;
+    font-size: 2rem;
+    color: rgba(33, 33, 33, 0.7);
+
+    .swiper-button-next {
+      margin-right: 3rem;
+    }
+
+    .swiper-button-prev {
+      margin-left: 1rem;
+    }
+  }
+}
+
+/**************Video**************/
+.Video {
+  .swiper {
+    position: relative;
+    margin: 5rem;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vid01_wrap,
+    .vid02_wrap,
+    .vid03_wrap {
+      position: relative;
+      top: 0;
+
+      .fa-play {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: #111;
+        font-size: 2rem;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 10rem 0 3rem 5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .swiper-button2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 45%;
+    font-size: 2rem;
+    color: rgba(98, 97, 97, 0.7);
+
+    .swiper-button-next {
+      justify-content: start;
+      margin-right: 2rem;
+    }
+
+    .swiper-button-prev {
+      justify-content: end;
+      margin-left: 2rem;
+    }
+  }
+}
+
+/*************Concert***************/
+
+.Concert {
+  h1 {
+    font-size: 2rem;
+    margin: 10rem 0 3rem 5rem;
+  }
+
+  .concert {
+    display: flex;
+    height: 30rem;
+    padding: 1rem;
+    overflow: hidden;
+
+    div {
+      object-fit: cover;
+      padding: 0 4rem;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+}
+
+/**************Content*********************/
+.Content {
+  .swiper {
+    position: relative;
+    margin: 5rem;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  h1 {
+    font-size: 2rem;
+    margin: 10rem 0 3rem 5rem;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+
+    img {
+
+      width: 22rem;
+      height: 28rem;
+      margin: 0 3rem;
+    }
+
+    p {
+      margin: 0.8rem 3rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  .swiper-button3 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 45%;
+    font-size: 2rem;
+    color: rgba(15, 15, 15, 0.8);
+
+
+    .swiper-button-next {
+      justify-content: start;
+      margin-right: 2rem;
+    }
+
+    .swiper-button-prev {
+      justify-content: end;
+      margin-left: 2rem;
+    }
+  }
+}
+
+
+/***************footer*****************/
+footer {
+  .footer {
+    display: flex;
+    background: #353333;
+    
+
+    .footer_logo {
+      margin: 2rem 2rem;
+
+      img {
+        width: 200px;
+        height: 34px;
+      }
+
+      p {
+        margin-top: 4rem;
+        color: #9D9D9D;
+        font-size: 10px;
+      }
+    }
+
+    .footer_text {
+      width: 100%;
+      padding: 2rem 0 0;
+
+      .address {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      span {
+        display: inline-block;
+        color: #8A8A8A;
+        font-size: 14px;
+        font-weight: 900;
+        margin-top: 1rem;
+      }
+
+      i {
+        margin-right: 1rem;
+        font-size: 1rem;
+
+      }
+
+      #footer_icon_i {
+        font-size: 1.5rem;
+        color: #fff;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #141414;
+  font-family: "Comfortaa", sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1260px) {
+  .header_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .header_container h1 img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .header_container nav {
+    display: none;
+  }
+  .header_container .icon_wrap .lang p,
+  .header_container .icon_wrap .lang i {
+    display: none;
+  }
+  .header_container .icon_wrap .link_icons {
+    display: none;
+  }
+  .header_container .trigger {
+    position: absolute;
+    right: -0.8rem;
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: transparent;
+    border: none;
+    margin-top: 0.2rem;
+    cursor: pointer;
+  }
+  .header_container .bar {
+    border: 1px solid #fff;
+    position: absolute;
+    right: 14px;
+    width: 22px;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s;
+  }
+  .header_container .bar:nth-child(1) {
+    top: 17px;
+  }
+  .header_container .bar:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  .header_container .bar:nth-child(3) {
+    bottom: 17px;
+  }
+  .header_container .trigger.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 24px;
+  }
+  .header_container .trigger.open .bar:nth-child(2) {
+    width: 0;
+  }
+  .header_container .trigger.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 24px;
+  }
+  .about_logo img {
+    width: 30.2rem;
+    margin-top: 13rem;
+    opacity: 60%;
+  }
+  .about_antenna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about_antenna .about_logo img {
+    overflow: hidden;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 1070px;
+  }
+  .main .main_txt {
+    text-align: center;
+  }
+}
+header {
+  width: 1024px;
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background: #353333;
+  padding: 0.6rem 0;
+}
+header .trigger {
+  display: none;
+}
+header .header_container {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+header .header_container h1 img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+header .header_container nav ul {
+  display: flex;
+}
+header .header_container nav ul a {
+  position: relative;
+  display: inline-block;
+  margin-left: 4rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+header .header_container nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FDE700;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+header .header_container nav ul a:hover {
+  color: #FDE700;
+}
+header .header_container nav ul a:hover::after {
+  transform: scaleX(1);
+}
+header .header_container .icon_wrap {
+  display: flex;
+  position: absolute;
+  right: 2rem;
+}
+header .header_container .icon_wrap .lang {
+  display: flex;
+  align-items: center;
+}
+header .header_container .icon_wrap .lang p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+header .header_container .icon_wrap .lang i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
+header .header_container .icon_wrap .link_icons i {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/**************main*************/
+main {
+  position: relative;
+  top: 0;
+}
+main .main {
+  display: flex;
+  gap: 4rem;
+  margin: 4rem 4rem 0;
+}
+main .main .youheeyul {
+  width: 40rem;
+  height: 40rem;
+}
+main .main .main_txt {
+  width: 60%;
+  height: 600px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+main .main .main_txt .main_txt1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+main .main .main_txt .main_txt2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 6rem;
+}
+main .main .main_txt .main_txt3 {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+main .main .main_txt .main_txt4 {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+main .sub_menu {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  background: rgba(37, 37, 37, 0.9);
+  width: 30.2rem;
+  height: 100%;
+  display: none;
+  z-index: 99;
+}
+main .sub_menu .sub_menu_wrap {
+  padding: 3rem;
+}
+main .sub_menu .sub_menu_wrap .sub_list li {
+  display: flex;
+  justify-content: end;
+}
+main .sub_menu .sub_menu_wrap .sub_list li a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 3rem;
+}
+main .sub_menu .sub_menu_wrap .sub_list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FDE700;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+main .sub_menu .sub_menu_wrap .sub_list li a:hover {
+  color: #FDE700;
+}
+main .sub_menu .sub_menu_wrap .sub_list li a:hover::after {
+  transform: scaleX(1);
+}
+main .sub_menu .sub_menu_wrap i {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #9D9D9D;
+}
+main .sub_menu .sub_menu_wrap i:hover {
+  color: #FDE700;
+}
+main .sub_menu .icon_wrap {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+}
+main .sub_menu .icon_wrap .link_icons a {
+  margin-left: 1rem;
+}
+main .sub_menu .icon_wrap .link_icons a i {
+  color: #9D9D9D;
+  font-size: 1.5rem;
+}
+main .sub_menu .icon_wrap .link_icons a i:hover {
+  color: #FDE700;
+}
+
+/******************album*********************/
+.Album .swiper {
+  position: relative;
+  margin: 5rem;
+  overflow: hidden;
+  padding: 0 0.8rem 0;
+}
+.Album .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.Album h1 {
+  font-size: 2rem;
+  margin: 10rem 0 3rem 5rem;
+}
+.Album .swiper-wrapper {
+  display: flex;
+}
+.Album .swiper-wrapper img {
+  width: 21rem;
+}
+.Album .swiper-wrapper p {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+.Album .swiper-button1 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 45%;
+  font-size: 2rem;
+  color: rgba(33, 33, 33, 0.7);
+}
+.Album .swiper-button1 .swiper-button-next {
+  margin-right: 3rem;
+}
+.Album .swiper-button1 .swiper-button-prev {
+  margin-left: 1rem;
+}
+
+/**************Video**************/
+.Video .swiper {
+  position: relative;
+  margin: 5rem;
+  overflow: hidden;
+}
+.Video .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Video .swiper-slide .vid01_wrap,
+.Video .swiper-slide .vid02_wrap,
+.Video .swiper-slide .vid03_wrap {
+  position: relative;
+  top: 0;
+}
+.Video .swiper-slide .vid01_wrap .fa-play,
+.Video .swiper-slide .vid02_wrap .fa-play,
+.Video .swiper-slide .vid03_wrap .fa-play {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #111;
+  font-size: 2rem;
+}
+.Video .swiper-slide .vid01_wrap .fa-play:hover,
+.Video .swiper-slide .vid02_wrap .fa-play:hover,
+.Video .swiper-slide .vid03_wrap .fa-play:hover {
+  color: #FDE700;
+}
+.Video h1 {
+  font-size: 2rem;
+  margin: 10rem 0 3rem 5rem;
+}
+.Video div {
+  display: flex;
+  justify-content: space-between;
+}
+.Video .swiper-button2 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 45%;
+  font-size: 2rem;
+  color: rgba(98, 97, 97, 0.7);
+}
+.Video .swiper-button2 .swiper-button-next {
+  justify-content: start;
+  margin-right: 2rem;
+}
+.Video .swiper-button2 .swiper-button-prev {
+  justify-content: end;
+  margin-left: 2rem;
+}
+
+/*************Concert***************/
+.Concert h1 {
+  font-size: 2rem;
+  margin: 10rem 0 3rem 5rem;
+}
+.Concert .concert {
+  display: flex;
+  height: 30rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+.Concert .concert div {
+  object-fit: cover;
+  padding: 0 4rem;
+}
+.Concert .concert div img {
+  width: 100%;
+}
+.Concert .concert div p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.Concert .concert div span {
+  font-size: 0.8rem;
+}
+
+/**************Content*********************/
+.Content .swiper {
+  position: relative;
+  margin: 5rem;
+  overflow: hidden;
+}
+.Content .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Content h1 {
+  font-size: 2rem;
+  margin: 10rem 0 3rem 5rem;
+}
+.Content .swiper-wrapper {
+  display: flex;
+}
+.Content .swiper-wrapper img {
+  width: 22rem;
+  height: 28rem;
+  margin: 0 3rem;
+}
+.Content .swiper-wrapper p {
+  margin: 0.8rem 3rem;
+  font-size: 0.8rem;
+}
+.Content .swiper-button3 {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 45%;
+  font-size: 2rem;
+  color: rgba(15, 15, 15, 0.8);
+}
+.Content .swiper-button3 .swiper-button-next {
+  justify-content: start;
+  margin-right: 2rem;
+}
+.Content .swiper-button3 .swiper-button-prev {
+  justify-content: end;
+  margin-left: 2rem;
+}
+
+/***************footer*****************/
+footer .footer {
+  display: flex;
+  background: #353333;
+}
+footer .footer .footer_logo {
+  margin: 2rem 2rem;
+}
+footer .footer .footer_logo img {
+  width: 200px;
+  height: 34px;
+}
+footer .footer .footer_logo p {
+  margin-top: 4rem;
+  color: #9D9D9D;
+  font-size: 10px;
+}
+footer .footer .footer_text {
+  width: 100%;
+  padding: 2rem 0 0;
+}
+footer .footer .footer_text .address {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .footer_text p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+}
+footer .footer .footer_text span {
+  display: inline-block;
+  color: #8A8A8A;
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: 1rem;
+}
+footer .footer .footer_text i {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+footer .footer .footer_text #footer_icon_i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+footer .footer .footer_text #footer_icon_i:hover {
+  color: #FDE700;
+}
+
+/*# sourceMappingURL=you.css.map */

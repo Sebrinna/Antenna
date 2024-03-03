@@ -1,0 +1,123 @@
+@media screen and (max-width:1260px) {
+    .header_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+        nav {
+            display: none;
+        }
+
+        .icon_wrap {
+            .lang {
+
+                p,
+                i {
+                    display: none;
+                }
+
+            }
+
+            .link_icons {
+                display: none;
+            }
+
+        }
+
+        .trigger {
+            position: absolute;
+            right: -0.8rem;
+            display: block;
+            width: 3.2rem;
+            height: 3.2rem;
+            background: transparent;
+            border: none;
+            margin-top: 0.2rem;
+            cursor: pointer;
+
+        }
+
+        .bar {
+            border: 1px solid #fff;
+            position: absolute;
+            right: 14px;
+            width: 22px;
+            height: 2px;
+            background: var(--main-color);
+            transition: 0.3s;
+        }
+
+        .bar:nth-child(1) {
+            top: 17px;
+        }
+
+        .bar:nth-child(2) {
+            top: calc(50% - 1px)
+        }
+
+        .bar:nth-child(3) {
+            bottom: 17px;
+        }
+
+        .trigger.open .bar:nth-child(1) {
+            transform: rotate(45deg);
+            top: 24px;
+        }
+
+        .trigger.open .bar:nth-child(2) {
+            width: 0;
+        }
+
+        .trigger.open .bar:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: 24px;
+        }
+
+    }
+
+    .about_logo {
+        img {
+            width: 30.2rem;
+            margin-top: 13rem;
+            opacity: 60%;
+        }
+    }
+
+    .about_antenna {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .about_logo {
+
+            img {
+                overflow: hidden;
+            }
+
+        }
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        width:1070px;
+
+        .main_txt {
+            text-align: center;
+        }
+    }
+    
+
+
+}
+
+@media screen and (max-width:600px) {
+   
+}

@@ -1,0 +1,66 @@
+{"data":[
+  {
+  "img":"img/store01.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store02.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store03.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store04.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store05.jpg",
+  "category":"limited"
+},
+{ 
+  "img":"img/store06.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store07.jpg",
+  "category":"limited"
+},
+{ 
+  "img":"img/store08.jpg",
+  "category":"limited"
+},
+{ 
+  "img":"img/store09.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store10.jpg",
+  "category":"goods"
+},
+{ 
+  "img":"img/store11.jpg",
+  "category":"limited"
+},
+{ 
+  "img":"img/store12.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store13.jpg",
+  "category":"goods"
+},
+{ 
+  "img":"img/store14.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store15.jpg",
+  "category":"select"
+},
+{ 
+  "img":"img/store16.png",
+  "category":"select"
+}
+]}
